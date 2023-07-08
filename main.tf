@@ -250,14 +250,14 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
 }
 
 
-resource "azurerm_virtual_machine_extension" "myterraformext" {
-  name                 = azurerm_resource_group.rg.location
-  virtual_machine_id   = azurerm_linux_virtual_machine.myterraformvm.id
-  publisher            = "Microsoft.Azure.ActiveDirectory"
-  type                 = "AADSSHLoginForLinux"
-  type_handler_version = "1.0"
-
-  tags = {
-    environment = "Production"
-  }
-}
+#resource "azurerm_virtual_machine_extension" "myterraformext" {
+#  name                 = azurerm_resource_group.rg.location
+#  virtual_machine_id   = azurerm_linux_virtual_machine.myterraformvm.id
+#  publisher            = "Microsoft.Azure.ActiveDirectory"
+#  type                 = "AADSSHLoginForLinux"
+#  type_handler_version = "1.0"
+#
+#  tags = {
+#    environment = "Production"
+#  }
+#}
