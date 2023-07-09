@@ -1,4 +1,8 @@
 # Terraform GitHub storage account for state output
+#
+#
+# Create Storage Account Container
+# az storage container create -n tfstate-brazilsouth --account-name  cloudmdterraformstate
 terraform {
   backend "azurerm" {
     resource_group_name     = "rg-terraform-state-001"
