@@ -5,6 +5,7 @@
 # Suggestion: create tfstate-repo-name, needs to be lower case only
 #
 # az storage container create -n tftstate-azure-terraform-dualstack-brazilsouth --account-name  cloudmdterraformstate
+#
 terraform {
   backend "azurerm" {
     resource_group_name     = "rg-terraform-state-001"
@@ -207,6 +208,7 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
     name                 = "ubuntu--${var.resource_group_location}-OsDisk"
     caching              = "ReadWrite"
     storage_account_type = "Premium_LRS"
+    secure_boot_enabled  = true
   }
 
 # To review the latest available image:
