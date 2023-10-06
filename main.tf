@@ -208,7 +208,7 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
     name                 = "ubuntu--${var.resource_group_location}-OsDisk"
     caching              = "ReadWrite"
     storage_account_type = "Premium_LRS"
-    secure_boot_enabled  = true
+    secure_boot_enabled  = "TrustedLaunch"
   }
 
 # To review the latest available image:
