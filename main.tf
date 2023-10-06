@@ -203,12 +203,12 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.myterraformnic.id]
   size                  = "Standard_B1s"
+  secure_boot_enabled  = "TrustedLaunch"
 
   os_disk {
     name                 = "ubuntu--${var.resource_group_location}-OsDisk"
     caching              = "ReadWrite"
     storage_account_type = "Premium_LRS"
-    secure_boot_enabled  = "TrustedLaunch"
   }
 
 # To review the latest available image:
