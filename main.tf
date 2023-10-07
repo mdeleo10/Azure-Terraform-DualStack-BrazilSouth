@@ -204,8 +204,8 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
   network_interface_ids = [azurerm_network_interface.myterraformnic.id]
   size                  = "Standard_B1s"
 # For Trusted Launch needs Generation V2 VM
-secure_boot_enabled  = true
-#  vtpm_enabled         = true
+#  secure_boot_enabled  = true
+  vtpm_enabled         = true
 
   os_disk {
     name                 = "ubuntu--${var.resource_group_location}-OsDisk"
