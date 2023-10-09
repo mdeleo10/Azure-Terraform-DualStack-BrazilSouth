@@ -204,6 +204,7 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
   network_interface_ids = [azurerm_network_interface.myterraformnic.id]
   size                  = "Standard_B1s"
 # For Trusted Launch needs Generation V2 VM
+  generation            = 2
   secure_boot_enabled   = true
   vtpm_enabled          = false
 
