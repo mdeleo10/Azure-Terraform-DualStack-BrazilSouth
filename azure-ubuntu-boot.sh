@@ -2,10 +2,11 @@
 sudo apt update
 sudo apt upgrade -y
 sudo apt install net-tools
-sudo apt install whois
 sudo apt install php -y  
-apt install python -y
-apt install nmap -y
+sudo apt install whois
+sudo apt install python -y
+sudo apt install nmap -y
+sudo apt install elinks
 sudo apt-get install -y apache2
 sudo apt install libapache2-mod-php7.4
 sudo a2enmod php7.4
