@@ -202,9 +202,12 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
   location              = azurerm_resource_group.rg.location
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.myterraformnic.id]
-  size                  = "Standard_D2s_v3"
+#   Standard_B1s - Gen1
+  size                  = "Standard_B1s"
+#  size                  = "Standard_D2s_v3"
+
 # For Trusted Launch needs Generation V2 VM
-  secure_boot_enabled   = true
+  secure_boot_enabled   = false
   vtpm_enabled          = false
 
   os_disk {
